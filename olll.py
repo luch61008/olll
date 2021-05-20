@@ -76,7 +76,7 @@ def gramschmidt(v: Sequence[Vector]) -> Sequence[Vector]:
         for uj in u:
             ui = ui - uj.proj(vi)
 
-        if any(ui):
+        if bool(any(ui)):
             u.append(ui)
     return u
 
